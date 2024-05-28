@@ -11,10 +11,12 @@ import { GiTakeMyMoney,GiPositionMarker  } from "react-icons/gi";
 import { FaMagnifyingGlassChart,FaHandHoldingDollar } from "react-icons/fa6";
 import { BsFillBasket2Fill } from "react-icons/bs";
 import { SiTestrail, SiSpeedtest,SiTradingview } from "react-icons/si";
+import './NavigationBar.css'; // Import CSS file for custom styles
+
 function NavigationBar() {
   return (
     <>
-        <Navbar expand={'lg'} className="bg-body-tertiary m-2 mx-auto rounded-pill border" style={{width: "80%"}}>
+        <Navbar expand={'lg'} className="bg-transparent border border-dark m-2 mx-auto rounded-pill"  style={{width: "95%"}}>
           <Container fluid>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
