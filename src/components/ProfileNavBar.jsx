@@ -6,7 +6,7 @@ import { BsPersonLinesFill } from "react-icons/bs";
 function ProfileNavBar() {
   return (
     <div>
-        <Navbar expand="lg" variant="light" className="shadow-sm fixed-top" style={{ background: '#010314', borderBottom: 'none' }}>
+        <Navbar expand="lg" variant="dark" className="shadow-sm" style={{ background: '#010314', borderBottom: 'none' }}>
             <Container>
                 <Navbar.Brand href="/" className="fw-bold" style={{ color: '#fff' }}><img src="assets/brand.jpg"/></Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
