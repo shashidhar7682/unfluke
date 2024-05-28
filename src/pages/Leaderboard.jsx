@@ -36,18 +36,20 @@ function Leaderboard() {
         </h1>
 
         <div className='tab container p-3 pb-1'>
+          <div className="d-flex justify-content-between align-items-center mb-3">
             <h2 className='text-light p-3' >Basic Backtest</h2>
-                  <Dropdown as={ButtonGroup}>
-            <Dropdown.Toggle variant="secondary" id="dropdown-basic">
-              Slippage
-            </Dropdown.Toggle>
+            <Dropdown as={ButtonGroup}>
+              <Dropdown.Toggle variant="secondary" id="dropdown-basic">
+                Slippage
+              </Dropdown.Toggle>
 
-            <Dropdown.Menu>
-              <Dropdown.Item href="#/action-1">0%</Dropdown.Item>
-              <Dropdown.Item href="#/action-2">0.5%</Dropdown.Item>
-              <Dropdown.Item href="#/action-3">1%</Dropdown.Item>
-            </Dropdown.Menu>
-          </Dropdown>
+              <Dropdown.Menu>
+                <Dropdown.Item href="#/action-1">0%</Dropdown.Item>
+                <Dropdown.Item href="#/action-2">0.5%</Dropdown.Item>
+                <Dropdown.Item href="#/action-3">1%</Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
+          </div>
             <table className="table table-hover">
                 <thead>
                     <tr>
