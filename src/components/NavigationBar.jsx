@@ -1,4 +1,5 @@
 import Button from 'react-bootstrap/Button';
+import React, { useState, useEffect } from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -15,13 +16,29 @@ import './NavigationBar.css'; // Import CSS file for custom styles
 
 function NavigationBar() {
 
-  const containerStyle = {
-    width: window.innerWidth < 1400 ? '95%' : '80%'
-  };
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    paddingStyle = window.innerWidth < 1465 ? '3%' : '10%';
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  var paddingStyle = window.innerWidth < 1300 ? '3%' : '8%';
 
   return (
     <>
-        <Navbar expand={'lg'} className="bg-transparent border border-dark m-2 mx-auto rounded-pill"  style={containerStyle} variant='dark'>
+      <Navbar expand={'lg'} className={`border border-dark rounded-pill  mx-auto  ${isScrolled ? 'scrolled' : ''}`} style={{ background: isScrolled ? '#020918' : 'transparent', borderBottom: 'none' ,margin:'0px',paddingLeft:paddingStyle,paddingRight:paddingStyle }} variant='dark'>
           <Container fluid>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
