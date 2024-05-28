@@ -1,0 +1,26 @@
+.tab {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    background:rgb(255, 255, 255);
+}
+
+.body{
+
+
+}
+
+.calmar-ratio-icon {
+    width: 16px;  /* Adjust the width as needed */
+    height: 16px; /* Adjust the height as needed */
+    margin-right: 5px;  /* Adjust the spacing between the image and text */
+    vertical-align: middle;  /* Align the image vertically with the text */
+
+}
+
+.table tbody tr {
+    transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+    
+}
+
+.table tbody tr:hover {
+    transform: translateY(-5px); /* Floating effect */ 
+}

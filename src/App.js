@@ -1,23 +1,17 @@
-import logo from './logo.svg';
+import Leaderboard from "./pages/Leaderboard.jsx";
 import './App.css';
-
+import NavigationBar from "./components/NavigationBar.jsx";
+import ProfileNavBar from "./components/ProfileNavBar.jsx";
+import Temp from "./Temp.jsx";
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ProfileNavBar />
+      <NavigationBar />
+      <div className="h-4/5">
+        <Leaderboard />
+        <Temp/>
+      </div>
     </div>
   );
 }
