@@ -8,7 +8,7 @@ function ProfileNavBar() {
     <div>
         <Navbar expand="lg" variant="dark" className="shadow-sm" style={{ background: '#010314', borderBottom: 'none' }}>
             <Container>
-                <Navbar.Brand href="/" className="fw-bold" style={{ color: '#fff' }}><img src="assets/brand.jpg"/></Navbar.Brand>
+                <Navbar.Brand href="/" className="fw-bold" style={{ color: '#fff' }}><img src="assets/brand.jpg" className='rounded-pill' /></Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="ms-auto align-items-center">

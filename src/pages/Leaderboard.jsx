@@ -4,7 +4,7 @@ import './Leaderboard.css';
 import { Dropdown, ButtonGroup } from 'react-bootstrap';
 
 function Leaderboard() {
-
+  
   const DisplayData = JsonData.map((info) => {
     return (
       <tr key={info.id} >
