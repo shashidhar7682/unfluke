@@ -9,7 +9,7 @@ import Offcanvas from 'react-bootstrap/Offcanvas';
 function NavigationBar() {
   return (
     <>
-        <Navbar expand={'lg'} className="bg-body-tertiary sticky-top m-2 mx-auto rounded-pill border" style={{width: "80%"}}>
+        <Navbar expand={'lg'} className="bg-body-tertiary m-2 mx-auto rounded-pill border" style={{width: "80%"}}>
           <Container fluid>
             <Navbar.Brand href="#">Unfluke</Navbar.Brand>
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-lg`} />
