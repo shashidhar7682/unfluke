@@ -1,6 +1,7 @@
 import React from 'react';
-import { Navbar, Container, Nav, Form, FormControl, Button } from 'react-bootstrap';
-import { FaHome, FaUsers, FaGraduationCap , FaFileSignature , FaAddressBook, FaUser, FaSearch } from 'react-icons/fa'; // 
+import { Navbar, Container, Nav, NavDropdown, FormControl, Button } from 'react-bootstrap';
+import { FaCoins, FaRegBell   } from 'react-icons/fa'; // 
+import { BsPersonLinesFill } from "react-icons/bs";
 
 function ProfileNavBar() {
   return (
@@ -8,31 +9,34 @@ function ProfileNavBar() {
         <Navbar expand="lg" variant="light" className="shadow-sm fixed-top" style={{ background: '#010314', borderBottom: 'none' }}>
             <Container>
                 <Navbar.Brand href="/" className="fw-bold" style={{ color: '#fff' }}><img src="assets/brand.jpg"/></Navbar.Brand>
-                <Navbar.Toggle aria-controls="navbarScroll" />
-                <Navbar.Collapse id="navbarScroll">
-                {/* <Form className="d-flex ms-auto align-items-center position-relative">
-                    <Button variant="Nav.Link" className="search-icon">
-                    <FaSearch style={{ color:'white' }} />
-                    </Button>
-                    <FormControl
-                    type="search"
-                    placeholder="Search"
-                    className={`search-field `}
-                    aria-label="Search"
-                    style={{ color: 'white', backgroundColor: 'white', borderColor: 'white' }}
-                    />
-                </Form> */}
+                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="ms-auto align-items-center">
-                <Nav.Link to="/" className="fw-bold nav-Nav.Link" style={{ color: '#fff' }}><FaHome className="me-1" /> Home</Nav.Link>
-                {/* <Nav.Link to="/network" className="fw-bold nav-Nav.Link" style={{ color: '#fff' }}><FaUsers className="me-1" /> Network</Nav.Link> */}
-                {/* <Nav.Link to="/learning" className="fw-bold nav-Nav.Link" style={{ color: '#fff' }}><FaGraduationCap className="me-1" /> Learning</Nav.Link> */}
-                {/* <Nav.Link to="/profile" className="fw-bold nav-Nav.Link" style={{ color: '#fff' }}><FaUser className="me-1" /> Profile</Nav.Link> */}
-                
+                <NavDropdown
+                    title={<FaRegBell  style={{ color: '#fff' }} className='me-1'/>}
+                    className="fw-bold nav-Nav.Link" style={{ color: '#fff' }}
+                  >
+                    <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
+                    <NavDropdown.Item href="#action4">
+                      Another action
+                    </NavDropdown.Item>
+                </NavDropdown>                
                 <>
-                <Nav.Link to="/login" className="fw-bold nav-Nav.Link" style={{ color: '#fff' }}><FaFileSignature className="me-1" /> Login</Nav.Link>
-                <Nav.Link to="/signup" className="fw-bold nav-Nav.Link" style={{ color: '#fff' }}><FaAddressBook className="me-1" /> Sign Up</Nav.Link>
-                </>
-                    
+                <Nav.Link to="/login" className="fw-bold nav-Nav.Link" style={{ color: '#fff' }}><FaCoins /></Nav.Link>
+                <NavDropdown
+                    title={<BsPersonLinesFill  style={{ color: '#fff'}} className='me-1'/>}
+                    className="fw-bold nav-Nav.Link" style={{ color: '#fff', }}                    
+                  >
+                    <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
+                    <NavDropdown.Item href="#action4">
+                      Another action
+                    </NavDropdown.Item>
+                    {/* <NavDropdown.Divider /> */}
+                    {/* <NavDropdown.Item href="#action5">
+                      Something else here
+                    </NavDropdown.Item> */}
+                </NavDropdown>
+                </>                    
                 </Nav>
                 </Navbar.Collapse>
             </Container>
