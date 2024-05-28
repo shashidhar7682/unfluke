@@ -1,6 +1,7 @@
 import React from 'react';
 import JsonData from './Leaderboard.json';
 import './Leaderboard.css';
+import { Dropdown, ButtonGroup } from 'react-bootstrap';
 
 function Leaderboard() {
 
@@ -36,6 +37,17 @@ function Leaderboard() {
 
         <div className='tab container p-3 pb-1'>
             <h2 className='text-light p-3' >Basic Backtest</h2>
+                  <Dropdown as={ButtonGroup}>
+            <Dropdown.Toggle variant="secondary" id="dropdown-basic">
+              Slippage
+            </Dropdown.Toggle>
+
+            <Dropdown.Menu>
+              <Dropdown.Item href="#/action-1">0%</Dropdown.Item>
+              <Dropdown.Item href="#/action-2">0.5%</Dropdown.Item>
+              <Dropdown.Item href="#/action-3">1%</Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown>
             <table className="table table-hover">
                 <thead>
                     <tr>
