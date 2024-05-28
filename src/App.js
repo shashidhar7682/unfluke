@@ -12,7 +12,7 @@ function App() {
       </div>
       <div className="h-4/5">
         <Leaderboard />
-        <Temp/>
+        {/* <Temp/> */}
       </div>
     </div>
   );

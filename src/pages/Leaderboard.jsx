@@ -3,7 +3,7 @@ import JsonData from './Leaderboard.json';
 import './Leaderboard.css';
 
 function Leaderboard() {
-
+  
   const DisplayData = JsonData.map((info) => {
     return (
       <tr key={info.id} >
