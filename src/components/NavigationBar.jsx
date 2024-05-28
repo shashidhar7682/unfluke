@@ -14,9 +14,14 @@ import { SiTestrail, SiSpeedtest,SiTradingview } from "react-icons/si";
 import './NavigationBar.css'; // Import CSS file for custom styles
 
 function NavigationBar() {
+
+  const containerStyle = {
+    width: window.innerWidth < 1400 ? '95%' : '80%'
+  };
+
   return (
     <>
-        <Navbar expand={'lg'} className="bg-transparent border border-dark m-2 mx-auto rounded-pill"  style={{width: "95%"}}>
+        <Navbar expand={'lg'} className="bg-transparent border border-dark m-2 mx-auto rounded-pill"  style={containerStyle} variant='dark'>
           <Container fluid>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
