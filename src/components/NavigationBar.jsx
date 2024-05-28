@@ -1,9 +1,5 @@
-import Button from 'react-bootstrap/Button';
 import React, { useState, useEffect } from 'react';
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
+import {Container,Nav,Navbar,NavDropdown} from 'react-bootstrap';
 import { MdLeaderboard } from "react-icons/md";
 import { VscGraphLine } from "react-icons/vsc";
 import {GoAlertFill} from "react-icons/go";
@@ -13,7 +9,6 @@ import { FaMagnifyingGlassChart,FaHandHoldingDollar } from "react-icons/fa6";
 import { BsFillBasket2Fill } from "react-icons/bs";
 import { SiTestrail, SiSpeedtest,SiTradingview } from "react-icons/si";
 import './NavigationBar.css'; // Import CSS file for custom styles
-import { useEffect,useState } from 'react';
 
 function NavigationBar() {
 
@@ -29,17 +24,16 @@ function NavigationBar() {
     };
 
     window.addEventListener('scroll', handleScroll);
-    paddingStyle = window.innerWidth < 1465 ? '3%' : '10%';
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
-  var paddingStyle = window.innerWidth < 1300 ? '3%' : '8%';
+  const widthStyle = window.innerWidth < 1300 ? '95%' : '80%';
 
   return (
     <>
-      <Navbar expand={'lg'} className={`border border-dark rounded-pill  mx-auto  ${isScrolled ? 'scrolled' : ''}`} style={{ background: isScrolled ? '#020918' : 'transparent', borderBottom: 'none' ,margin:'0px',paddingLeft:paddingStyle,paddingRight:paddingStyle }} variant='dark'>
+      <Navbar expand={'lg'} className={`border border-dark rounded-pill  mx-auto  ${isScrolled ? 'scrolled' : ''}`} style={{ background: isScrolled ? '#020918' : 'transparent', borderBottom: 'none' ,margin:'0px',maxWidth:widthStyle }} variant='dark'>
           <Container fluid>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
