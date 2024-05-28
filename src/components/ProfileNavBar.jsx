@@ -5,7 +5,7 @@ import { FaHome, FaUsers, FaGraduationCap , FaFileSignature , FaAddressBook, FaU
 function ProfileNavBar() {
   return (
     <div>
-        <Navbar expand="lg" variant="light" className="shadow-sm fixed-top" style={{ background: '#59045e', borderBottom: 'none' }}>
+        <Navbar expand="lg" variant="light" className="shadow-sm fixed-top" style={{ background: '#010314', borderBottom: 'none' }}>
             <Container>
                 <Navbar.Brand href="/" className="fw-bold" style={{ color: '#fff' }}><img src="assets/brand.jpg"/></Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbarScroll" />

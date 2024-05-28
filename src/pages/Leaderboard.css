@@ -1,11 +1,33 @@
 .tab {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    background:rgb(255, 255, 255);
+    background: rgb(255, 255, 255);
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.2); /* Slight transparency */
 }
 
-.body{
+.body {
+    min-height: 100vh; /* Ensure it covers the full viewport height */
+    padding: 20px;
+    position: relative;
+}
 
+.table {
+    background-color: transparent;
+}
 
+.table thead th {
+    background-color: rgba(0, 0, 0, 0.1); /* Slight transparency for the header */
+    color: white; /* Text color for contrast */
+}
+
+.table tbody tr td {
+    background-color: transparent;
+    color: white; /* Text color for contrast */
+}
+
+.table tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Slightly more opaque on hover */
+    transform: translateY(-5px); /* Floating effect */
 }
 
 .calmar-ratio-icon {
@@ -13,14 +35,47 @@
     height: 16px; /* Adjust the height as needed */
     margin-right: 5px;  /* Adjust the spacing between the image and text */
     vertical-align: middle;  /* Align the image vertically with the text */
-
 }
 
-.table tbody tr {
-    transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
-    
+button {
+    color: white; /* Text color for buttons */
 }
 
-.table tbody tr:hover {
-    transform: translateY(-5px); /* Floating effect */ 
+.head {
+    position: relative; /* Allows the floating image to be positioned relative to this element */
+}
+
+.floating-image1 {
+    width: 80px;  /* Adjust the width as needed */
+    height: 80px; /* Maintain aspect ratio */
+    position: absolute;
+    top: 50%; /* Adjust positioning as needed */
+    right: 200px; /* Adjust positioning as needed */
+    animation: float1 3s ease-in-out infinite; /* Apply float animation */
+}
+.floating-image2 {
+    width: 80px;  /* Adjust the width as needed */
+    height: 80px; /* Maintain aspect ratio */
+    position: absolute;
+    top: 40%; /* Adjust positioning as needed */
+    left: 200px; /* Adjust positioning as needed */
+    animation: float2 3s ease-in-out infinite; /* Apply float animation */
+}
+
+@keyframes float1 {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px); /* Adjust the height of the float */
+    }
+}
+
+@keyframes float2 {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-20px); /* Adjust the height of the float */
+    }
 }
